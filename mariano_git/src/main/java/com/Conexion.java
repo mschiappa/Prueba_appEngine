@@ -10,8 +10,8 @@ public class Conexion {
    public static Connection obtener() throws SQLException, ClassNotFoundException {
       if (cnx == null) {
          try {
-        	 Class.forName("com.mysql.cj.jdbc.Driver");
-            cnx = DriverManager.getConnection("jdbc:mysql://34.72.218.208:3306/galaxia","root", "Misofsan18");
+        	 Class.forName("com.mysql.jdbc.Driver");
+            cnx = DriverManager.getConnection("jdbc:mysql://34.72.218.208:3306/galaxia","galaxia", "Misofsan18");
          } catch (SQLException ex) {
             throw new SQLException(ex);
          }
