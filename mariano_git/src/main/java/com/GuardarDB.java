@@ -77,9 +77,12 @@ public class GuardarDB {
          
      
            
-         st.executeQuery(sql);
-         String resultado=st.getResultSet().getString(2);
-         return resultado;
+          String resultado="";
+          ResultSet rs = st.executeQuery(sql);
+          while(rs.next()) {
+         resultado= rs.getString("estado");
+          }
+          return resultado;
       }catch(SQLException ex){
          throw new SQLException(ex);
       
