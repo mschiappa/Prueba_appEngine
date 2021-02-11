@@ -29,7 +29,7 @@ public class MarianoApplication {
 	            }
 	         GuardarDB guardarDB=new GuardarDB();
 	        guardarDB.consultarPronostico(con, 109);
-	        guardarDB.limpiarPronostico(con);
+	   /*     guardarDB.limpiarPronostico(con);
 	          guardarDB.completarPronostico(con);
 	        //calculo de Sequia
 	        Alineacion sequia = new Alineacion ();
@@ -63,7 +63,7 @@ public class MarianoApplication {
 	      //  ConocerLluvia infoLLuvia= new ConocerLluvia();
 	        PresionYTemp=PresyT.presionTemperatura(cantDiasT);
 	        System.out.println("Se pronostica existiran "+ PresionYTemp+ " "
-	                + "periodos de optima temperatura y presion .");
+	                + "periodos de optima temperatura y presion .");*/
 	
 	        SpringApplication.run(MarianoApplication.class, args);
 	}

@@ -21,7 +21,7 @@ import com.Lluvia;
 @RequestMapping("/")
 public class Controller {
 	@RequestMapping(value="obtenerclima", method=RequestMethod.GET)	
-	public ResponseEntity<Object> obtenerClima(/*@PathParam("dia") Integer dia*/) throws SQLException {
+	public ResponseEntity<Object> obtenerClima(@PathParam("dia") Integer dia) throws SQLException {
 	    Conexion conexion =new Conexion();
         Connection con = null;
          try {
@@ -32,7 +32,7 @@ public class Controller {
              Logger.getLogger(Lluvia.class.getName()).log(Level.SEVERE, null, ex);
          }
                       GuardarDB guardarDB=new GuardarDB();
-                     String EstadoConsultado=guardarDB.consultarPronostico(con, 109);
+                     String EstadoConsultado=guardarDB.consultarPronostico(con, dia);
 		
 		
 		return new ResponseEntity<>(EstadoConsultado,  HttpStatus.OK);
