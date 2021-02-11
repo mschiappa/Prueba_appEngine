@@ -28,7 +28,7 @@ public class MarianoApplication {
 	               
 	            }
 	         GuardarDB guardarDB=new GuardarDB();
-	        guardarDB.consultarPronostico(con, 109);
+	     //   guardarDB.consultarPronostico(con, 109);
 	   /*     guardarDB.limpiarPronostico(con);
 	          guardarDB.completarPronostico(con);
 	        //calculo de Sequia
