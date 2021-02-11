@@ -11,7 +11,8 @@ package com;
  * @author Usuario
  */
 public class ConocerLluvia {
-     int cantLluvia, diaLLuvia;
+     public int cantLluvia;
+	public int diaLLuvia;
     public ConocerLluvia(){
       cantLluvia=0;
       diaLLuvia=0;
