@@ -27,7 +27,7 @@ import com.PresionTemperatura;
 
 public class Job {
 
-	@RequestMapping(value="calcularPronostico", method=RequestMethod.PUT)	
+	@RequestMapping(value="calcularPronostico", method=RequestMethod.GET)	
 		
 			public  ResponseEntity<Object> calcularPronostico(@PathParam("dia") Integer dia) throws SQLException {
 		 int diasSequia;
