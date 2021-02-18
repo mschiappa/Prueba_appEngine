@@ -12,6 +12,7 @@ import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 import com.Conexion;
 import com.GuardarDB;
@@ -19,6 +20,7 @@ import com.Lluvia;
 
 @RestController
 @RequestMapping("/")
+
 public class Controller {
 	@RequestMapping(value="obtenerclima", method=RequestMethod.GET)	
 	public ResponseEntity<Object> obtenerClima(@PathParam("dia") Integer dia) throws SQLException {

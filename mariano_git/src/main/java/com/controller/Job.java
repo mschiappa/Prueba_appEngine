@@ -22,14 +22,14 @@ import com.Lluvia;
 import com.Planetas;
 import com.PresionTemperatura;
 @RestController
-@RequestMapping("/job")
+@RequestMapping("/")
 
 
 public class Job {
 
 	@RequestMapping(value="calcularPronostico", method=RequestMethod.PUT)	
 		
-			public  void calcularPronostico() throws SQLException {
+			public  ResponseEntity<Object> calcularPronostico(@PathParam("dia") Integer dia) throws SQLException {
 		 int diasSequia;
 	        Planetas Vulcano = new Planetas (-5,1000, "Vulcano");
 	        Planetas Ferengis  = new Planetas (1,500, "Ferengis");
@@ -51,8 +51,8 @@ public class Job {
 	        Alineacion sequia = new Alineacion ();
 	        sequia.Alineacion(2);
 	        Scanner sna = new Scanner(System.in);
-	            System.out.println("Por favor escriba la cantidad de dias del periodo a evaluar");
-	          int cantDiasT= Integer.parseInt((sna.next()));
+	  //          System.out.println("Por favor escriba la cantidad de dias del periodo a evaluar");
+	          int cantDiasT= 3670; 
 	              
 	        diasSequia=sequia.Sequia(cantDiasT);
 	        System.out.println("Se pronostica "+ diasSequia +" días de sequia en el periodo evaluado" + " en el periodo evaluado de "
@@ -80,10 +80,11 @@ public class Job {
 	        PresionYTemp=PresyT.presionTemperatura(cantDiasT);
 	        System.out.println("Se pronostica existiran "+ PresionYTemp+ " "
 	                + "periodos de optima temperatura y presion .");
-				
+				Integer diaConsultado=dia;
 				
 				//return new ResponseEntity<>(EstadoConsultado,  HttpStatus.OK);
-			}
+	        return new ResponseEntity<>("OK",  HttpStatus.OK);
+	}
 			
 		
 		// TODO Auto-generated method stub
