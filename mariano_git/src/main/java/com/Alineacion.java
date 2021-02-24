@@ -59,7 +59,7 @@ public class Alineacion {
       }else if(PB>=90 & PB<180){
         anga=90-(PB);
         coordYB=  (Math.round(distB*Math.sin(Math.toRadians(PB))*10.0)/10.0);
-        coordXB=  (Math.round(distB*Math.cos(Math.toRadians(PB))*10.0)/00.0);
+        coordXB=  (Math.round(distB*Math.cos(Math.toRadians(PB))*10.0)/10.0);
           
       }else if(PB>=180 & PB<270){
         anga=90-PB;
